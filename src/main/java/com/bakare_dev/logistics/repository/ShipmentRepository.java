@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.Optional;
 
-interface ShipmentRepository extends JpaRepository<Shipment, Long> {
+public interface ShipmentRepository extends JpaRepository<Shipment, Long> {
     Optional<Shipment> findByTrackingNumber(String trackingNumber);
 
     List<Shipment> findByStatus(ShipmentStatus status);

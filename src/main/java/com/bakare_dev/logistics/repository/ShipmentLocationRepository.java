@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-interface ShipmentLocationRepository extends JpaRepository<ShipmentLocation, Long> {
+public interface ShipmentLocationRepository extends JpaRepository<ShipmentLocation, Long> {
     List<ShipmentLocation> findByShipmentOrderByTimestampDesc(Shipment shipment);
 }
